@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Integrated Flood</string>
+
+    <string name="number_of_people">Number Of People using Water</string>
+    <string name="total_rooftop_area">Total Rooftop Area avilable \n    (in square meter)</string>
+    <string name="total_nonrooftop_area">Total NonRoofTop available \n       (in square meter)</string>
+    <string name="ave_water_demand">Average Water Demand \n  (Per Person in Liters Per Day)</string>
+    <string name="type_of_rooftop">Type Of Roof Tops</string>
+
+    <string name="flat_roof">Flat Roof</string>
+    <string name="tiles">Tiles</string>
+    <string name="iron_sheets">Iron/Metal Sheets</string>
+    <string name="thatched">Thatched</string>
+
+    <string name="next_main">Next</string>
+    <string name="previous">Previous</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="next_maps">Next</string>
+    <string name="location">Mark your location</string>
+
+    <string name="text">Text</string>
+
+    <string name="type_ofBMPs">Type of BMPs</string>
+    <string name="BMPTypes">BMP Types</string>
+
+    <string name="InfiltrationBasin">InfiltrationBasin</string>
+    <string name="InfiltrationTrench">InfiltrationTrench</string>
+    <string name="RainBarrel">RainBarrel</string>
+    <string name="Vegetated_Filter_Strips">Vegetated Filter Strips</string>
+    <string name="Porous_Pavement">Porous Pavement </string>
+    <string name="Grassed_Swales">Grassed Swales</string>
+    <string name="Constructed_Wetland">Constructed Wetland</string>
+    <string name="Bioretention">Bioretention</string>
+    <string name="Sand_Filter_Surface">Sand Filter Surface</string>
+
+    <string name="Results">Results</string>
+    <string name="UsefulData">Useful Data</string>
+    <string name="Rainfall">Average Rainfall</string>
+
+    <string name="Total_Water_Demand">Total Water Demand (per year)</string>
+    <string name="Water_Saved_Roof">Water that can be saved from \n Roof top Harvesting</string>
+    <string name="Water_Saved_NonRoof">Water that can be saved from \n NonRoof top Harvesting</string>
+    <string name="Cost">Cost for Non RoofTop Harvesting</string>
+
+    <string name="DummyText">Dummy</string>
+
+</resources>
