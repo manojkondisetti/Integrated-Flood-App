@@ -17,19 +17,20 @@
         map:layout_constraintEnd_toEndOf="parent"
         map:layout_constraintStart_toStartOf="parent"
         map:layout_constraintTop_toTopOf="parent"
-        tools:context=".MapsActivity">
+        tools:context=".activity.MapsActivity">
 
     </androidx.fragment.app.FragmentContainerView>
 
-    <Button
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/NextMaps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="sendMessageFromMaps"
+        android:src="@mipmap/ic_next"
         android:text="@string/next_maps"
         map:layout_constraintBottom_toBottomOf="parent"
         map:layout_constraintEnd_toEndOf="parent"
-        map:layout_constraintStart_toStartOf="parent" />
+        android:layout_margin="16dp" />
 
     <TextView
         android:id="@+id/mark_location"

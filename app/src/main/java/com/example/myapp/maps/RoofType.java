@@ -1,12 +1,12 @@
-package com.example.myapp;
+package com.example.myapp.maps;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.example.myapp.Constants.FLAT_ROOF;
-import static com.example.myapp.Constants.IRON_SHEETS;
-import static com.example.myapp.Constants.THATCHED;
-import static com.example.myapp.Constants.TILES;
+import static com.example.myapp.constants.Constants.FLAT_ROOF;
+import static com.example.myapp.constants.Constants.IRON_SHEETS;
+import static com.example.myapp.constants.Constants.THATCHED;
+import static com.example.myapp.constants.Constants.TILES;
 
 public class RoofType {
 

@@ -1,13 +1,14 @@
-package com.example.myapp;
-
-import androidx.fragment.app.FragmentActivity;
+package com.example.myapp.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
+import androidx.fragment.app.FragmentActivity;
+
+import com.example.myapp.R;
+import com.example.myapp.model.UserData;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -20,11 +21,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
     private LatLng latLng;
     private Button next;
+    private UserData userData;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        userData = (UserData) getIntent().getSerializableExtra("UserData");
         setContentView(R.layout.activity_maps);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -63,11 +66,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
-        next = (Button) findViewById(R.id.NextMaps);
+        next = findViewById(R.id.NextMaps);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                UserData.setLocation(latLng);
+                //userData.setLocation(latLng);
                 openEmptyActivity();
             }
         });
@@ -76,6 +79,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private void openEmptyActivity() {
         Intent intent = new Intent(this, FinalActivity.class);
+        intent.putExtra("UserData", userData);
         startActivity(intent);
     }
 

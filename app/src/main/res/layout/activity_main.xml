@@ -229,15 +229,14 @@
                 </RadioGroup>
             </TableRow>
 
-            <TableRow>
-
-                <Button
-                    android:id="@+id/NextMain"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_column="1"
-                    android:text="@string/next_main" />
-            </TableRow>
+            <!-- https://developer.android.com/guide/topics/ui/floating-action-button -->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/NextMain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_next"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="16dp" />
         </TableLayout>
     </ScrollView>
 

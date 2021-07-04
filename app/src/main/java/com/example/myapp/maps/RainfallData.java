@@ -1,4 +1,4 @@
-package com.example.myapp;
+package com.example.myapp.maps;
 
 public class RainfallData {
     public static double RAINFALL_SEASON = 0.19;

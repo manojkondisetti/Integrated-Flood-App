@@ -1,18 +1,20 @@
-package com.example.myapp;
+package com.example.myapp.maps;
 
+
+import com.example.myapp.model.BMPObject;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.example.myapp.Constants.BIORETENTION;
-import static com.example.myapp.Constants.CONSTRUCTED_WETLANDS;
-import static com.example.myapp.Constants.GRASSED_SWALES;
-import static com.example.myapp.Constants.INFILTRATION_BASIN;
-import static com.example.myapp.Constants.INFILTRATION_TRENCH;
-import static com.example.myapp.Constants.POROUS_PAVEMENT;
-import static com.example.myapp.Constants.RAIN_BARRELS;
-import static com.example.myapp.Constants.SAND_FILTER_SURFACE;
-import static com.example.myapp.Constants.VEGETATED_FILTER_STRIPS;
+import static com.example.myapp.constants.Constants.BIORETENTION;
+import static com.example.myapp.constants.Constants.CONSTRUCTED_WETLANDS;
+import static com.example.myapp.constants.Constants.GRASSED_SWALES;
+import static com.example.myapp.constants.Constants.INFILTRATION_BASIN;
+import static com.example.myapp.constants.Constants.INFILTRATION_TRENCH;
+import static com.example.myapp.constants.Constants.POROUS_PAVEMENT;
+import static com.example.myapp.constants.Constants.RAIN_BARRELS;
+import static com.example.myapp.constants.Constants.SAND_FILTER_SURFACE;
+import static com.example.myapp.constants.Constants.VEGETATED_FILTER_STRIPS;
 
 public class BMPData {
 
