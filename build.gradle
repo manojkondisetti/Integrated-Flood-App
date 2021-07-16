@@ -3,6 +3,18 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven { url "https://jitpack.io" }
+        maven {
+            url 'http://davidsoergel.com/nexus/content/repositories/releases'
+            allowInsecureProtocol true
+        }
+        maven {
+            url 'http://davidsoergel.com/nexus/content/repositories/thirdparty'
+            allowInsecureProtocol true
+        }
+        maven {
+            url 'https://dl.bintray.com/flowtick/jgraphx/'
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.2.2'
@@ -16,6 +28,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url "https://jitpack.io" }
     }
 }
 

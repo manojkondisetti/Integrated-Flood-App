@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".activity.floodIndentation.FloodIndentationFinalActivity">
+
+            <TextView
+                android:id="@+id/Results"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="#0079D6"
+                android:gravity="center"
+                android:text="@string/Results"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:background="#DAE8FC"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="Output of ML Model"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/mlResult"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:background="#DAE8FC"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="XXX units"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

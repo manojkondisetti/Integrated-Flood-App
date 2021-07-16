@@ -17,7 +17,7 @@
         map:layout_constraintEnd_toEndOf="parent"
         map:layout_constraintStart_toStartOf="parent"
         map:layout_constraintTop_toTopOf="parent"
-        tools:context=".activity.MapsActivity">
+        tools:context=".activity.harvestingtool.HarvestingTechniquesMapsActivity">
 
     </androidx.fragment.app.FragmentContainerView>
 
@@ -32,15 +32,29 @@
         map:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="16dp" />
 
-    <TextView
-        android:id="@+id/mark_location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/location"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        map:layout_constraintEnd_toEndOf="parent"
-        map:layout_constraintStart_toStartOf="parent"
-        map:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="248dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/location"
+            android:layout_weight="0.5"
+            android:textColor="#FFFFFF"
+            android:inputType="textPersonName"
+            android:hint="Search Location"
+            android:textColorHint="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/Search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:onClick="searchLocation"
+            android:text="Search" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

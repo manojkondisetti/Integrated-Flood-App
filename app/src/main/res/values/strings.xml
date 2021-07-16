@@ -45,4 +45,8 @@
 
     <string name="DummyText">Dummy</string>
 
+    <string name="flood_prediction">Flood Prediction</string>
+    <string name="harvesting_techniques">Harvesting Techniques</string>
+    <string name="title_3">Title 3</string>
+
 </resources>

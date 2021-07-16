@@ -1,4 +1,4 @@
-package com.example.myapp.activity;
+package com.example.myapp.activity.harvestingtool;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,25 +11,26 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapp.R;
-import com.example.myapp.model.UserData;
+import com.example.myapp.model.HarvestingTechniquesUserData;
 
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class MainActivity extends AppCompatActivity {
+public class HarvestingTechniquesActivity extends AppCompatActivity {
 
     private EditText people, areaTop, areanOnTop, average;
-    private int noOfPeople, areaOfRoofTop, areaOfNonRoofTop, averageWaterDemand;
+    private int noOfPeople;
+    private double areaOfRoofTop, areaOfNonRoofTop, averageWaterDemand;
     private RadioButton radioButton1, radioButton2;
     private RadioGroup radioGroup1, radioGroup2;
     private String roofType, bmptype;
-    private UserData userData;
+    private HarvestingTechniquesUserData harvestingTechniquesUserData;
     private LatLng defaultLatLng = new LatLng(17.367439, 78.475853);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_harvestingtechniques);
         addListenerOnButton();
     }
 
@@ -48,21 +49,21 @@ public class MainActivity extends AppCompatActivity {
 
                 if (validateInput()) {
                     noOfPeople = Integer.parseInt(people.getText().toString());
-                    areaOfRoofTop = Integer.parseInt(areaTop.getText().toString());
-                    areaOfNonRoofTop = Integer.parseInt(areanOnTop.getText().toString());
-                    averageWaterDemand = Integer.parseInt(average.getText().toString());
+                    areaOfRoofTop = Double.parseDouble(areaTop.getText().toString());
+                    areaOfNonRoofTop = Double.parseDouble(areanOnTop.getText().toString());
+                    averageWaterDemand = Double.parseDouble(average.getText().toString());
                     radioButton1 = findViewById(radioGroup1.getCheckedRadioButtonId());
                     roofType = radioButton1.getText().toString();
                     radioButton2 = findViewById(radioGroup2.getCheckedRadioButtonId());
                     bmptype = radioButton2.getText().toString();
 
-                    userData = new UserData(noOfPeople, areaOfRoofTop, areaOfNonRoofTop,
+                    harvestingTechniquesUserData = new HarvestingTechniquesUserData(noOfPeople, areaOfRoofTop, areaOfNonRoofTop,
                             averageWaterDemand, roofType, bmptype, defaultLatLng.latitude, defaultLatLng.longitude);
 
                     Toast.makeText(getApplicationContext(), "Data is saved for processing", Toast.LENGTH_SHORT).show();
                     openMapsActivity();
                 } else {
-                    Toast.makeText(getApplicationContext(), "Please fill all the fields", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -79,8 +80,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openMapsActivity() {
-        Intent intent = new Intent(this, MapsActivity.class);
-        intent.putExtra("UserData", userData);
+        Intent intent = new Intent(this, HarvestingTechniquesMapsActivity.class);
+        intent.putExtra("UserData", harvestingTechniquesUserData);
         startActivity(intent);
     }
 

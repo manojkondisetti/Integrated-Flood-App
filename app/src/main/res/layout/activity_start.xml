@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/floddInduntationMain"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <GridLayout
+        android:id="@+id/favorites_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".FirstFragment">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:text="Flood Induntation"
+            android:id="@+id/floodInduntation"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#81D4FA"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:text="Building Risk Analysis"
+            android:id="@+id/buildingriskanalysis"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#80DEEA"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:text="@string/harvesting_techniques"
+            android:id="@+id/harvestingTechniques"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#80CBC4"/>
+
+
+    </GridLayout>
+</RelativeLayout>

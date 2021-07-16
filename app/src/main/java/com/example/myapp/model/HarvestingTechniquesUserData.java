@@ -10,7 +10,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class UserData implements Serializable {
+public class HarvestingTechniquesUserData implements Serializable {
     @NonNull private int noOfPeople;
     @NonNull private double areaOfRoofTop;
     @NonNull private double areaOfNonRoofTop;

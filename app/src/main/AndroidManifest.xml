@@ -28,17 +28,37 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity
-            android:name=".activity.MapsActivity"
-            android:label="@string/title_activity_maps" />
-        <activity android:name=".activity.MainActivity">
+        <!--
+               Start Activity
+        -->
+        <activity android:name=".activity.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.FinalActivity"></activity>
+
+        <!--
+            Flood Indentation
+        -->
+        <activity android:name=".activity.floodIndentation.FloodIndentationActivity" />
+        <activity android:name=".activity.floodIndentation.FloodIndentationFinalActivity" />
+
+        <!--
+            Building Risk Analysis
+        -->
+        <activity android:name=".activity.buildingriskanalysis.BuildingRiskAnalysisMainActivity" />
+        <activity android:name=".activity.buildingriskanalysis.BuildingRiskAnalysisFinalActivity" />
+
+        <!--
+            Harvesting Techniques
+        -->
+        <activity android:name=".activity.harvestingtool.HarvestingTechniquesActivity"/>
+        <activity
+            android:name=".activity.harvestingtool.HarvestingTechniquesMapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".activity.harvestingtool.HarvestingTechniquesFinalActivity" />
     </application>
 
 </manifest>

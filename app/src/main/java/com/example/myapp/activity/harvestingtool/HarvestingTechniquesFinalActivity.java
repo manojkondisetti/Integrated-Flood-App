@@ -1,4 +1,4 @@
-package com.example.myapp.activity;
+package com.example.myapp.activity.harvestingtool;
 
 import android.os.Bundle;
 import android.widget.TextView;
@@ -9,7 +9,7 @@ import com.example.myapp.maps.BMPData;
 import com.example.myapp.R;
 import com.example.myapp.maps.RoofType;
 import com.example.myapp.model.BMPObject;
-import com.example.myapp.model.UserData;
+import com.example.myapp.model.HarvestingTechniquesUserData;
 
 import java.util.Map;
 
@@ -19,7 +19,7 @@ import static com.example.myapp.constants.Constants.INFILTRATION_TRENCH;
 import static com.example.myapp.constants.Constants.RAIN_BARRELS;
 import static com.example.myapp.maps.RainfallData.RAINFALL_AVERAGE_PER_YEAR;
 
-public class FinalActivity extends AppCompatActivity {
+public class HarvestingTechniquesFinalActivity extends AppCompatActivity {
 
     private double roofTopArea;
     private double waterDemand;
@@ -29,12 +29,12 @@ public class FinalActivity extends AppCompatActivity {
     private Map<String, BMPObject> bmpMap;
     private Map<String, Double> roofMap;
     private BMPData bmpData = new BMPData();
-    private UserData userData;
+    private HarvestingTechniquesUserData harvestingTechniquesUserData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        userData = (UserData) getIntent().getSerializableExtra("UserData");
+        harvestingTechniquesUserData = (HarvestingTechniquesUserData) getIntent().getSerializableExtra("UserData");
         setContentView(R.layout.activity_final);
         resultsDisplay();
         usefulDataDisplay();
@@ -43,11 +43,11 @@ public class FinalActivity extends AppCompatActivity {
     private void resultsDisplay() {
         bmpMap = bmpData.getBMPDataMap();
         roofMap = RoofType.getRoofMap();
-        roofTopArea = userData.getAreaOfRoofTop();
-        waterDemand = userData.getNoOfPeople() * userData.getAverageWaterDemand() * DAYS_IN_AN_YEAR;
-        waterSavedFromNonRoofTop = RAINFALL_AVERAGE_PER_YEAR * userData.getAreaOfNonRoofTop()
-                * bmpMap.get(userData.getBmpType()).getEfficiency();
-        cost = userData.getAreaOfNonRoofTop() * bmpMap.get(userData.getBmpType()).getDepth() * 3500;
+        roofTopArea = harvestingTechniquesUserData.getAreaOfRoofTop();
+        waterDemand = harvestingTechniquesUserData.getNoOfPeople() * harvestingTechniquesUserData.getAverageWaterDemand() * DAYS_IN_AN_YEAR;
+        waterSavedFromNonRoofTop = RAINFALL_AVERAGE_PER_YEAR * harvestingTechniquesUserData.getAreaOfNonRoofTop()
+                * bmpMap.get(harvestingTechniquesUserData.getBmpType()).getEfficiency();
+        cost = harvestingTechniquesUserData.getAreaOfNonRoofTop() * bmpMap.get(harvestingTechniquesUserData.getBmpType()).getDepth() * 3500;
 
         if (roofTopArea < 50) {
             waterSavedFromRoofTop = getWaterSavedFromRainFall(RAIN_BARRELS);
@@ -90,9 +90,9 @@ public class FinalActivity extends AppCompatActivity {
     }
 
     private double getWaterSavedFromRainFall(String BMP) {
-        return RAINFALL_AVERAGE_PER_YEAR * userData.getAreaOfRoofTop()
+        return RAINFALL_AVERAGE_PER_YEAR * harvestingTechniquesUserData.getAreaOfRoofTop()
                 * bmpMap.get(BMP).getEfficiency()
-                * roofMap.get(userData.getRoofType());
+                * roofMap.get(harvestingTechniquesUserData.getRoofType());
     }
 
     @Override

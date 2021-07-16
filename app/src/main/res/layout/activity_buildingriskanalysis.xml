@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/Q1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginTop="12dp"
+                    android:text="Flood Depth Data(m)"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/A1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginTop="12dp"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:textColor="#000000" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/Q2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginTop="12dp"
+                    android:text = "Roof Top Area(m2)"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/A2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginTop="12dp"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:textColor="#000000" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/Q3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginTop="12dp"
+                    android:text="Perimeter of building(m)"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/A3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginTop="12dp"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:textColor="#000000" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/Q4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginTop="12dp"
+                    android:text="Water Proofing depth(m)"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/A4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginTop="12dp"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:textColor="#000000" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/Q5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginTop="12dp"
+                    android:text="Degree of Protection(%)"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/A5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginTop="12dp"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:textColor="#000000" />
+
+            </TableRow>
+
+            <!-- https://developer.android.com/guide/topics/ui/floating-action-button -->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/NextMain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_next"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="16dp" />
+        </TableLayout>
+    </ScrollView>
+
+</RelativeLayout>
