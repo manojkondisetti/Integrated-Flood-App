@@ -16,6 +16,7 @@ public class BuildingRiskAnalysisFinalActivity extends AppCompatActivity {
 
     private EditText buildingriskanalysis;
     BuildingRiskAnalysisUserData buildingRiskAnalysisUserData;
+    private Double cost = 412.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +29,15 @@ public class BuildingRiskAnalysisFinalActivity extends AppCompatActivity {
 
     private void displayResults() {
         TextView buildingriskanalysis = findViewById(R.id.buildingriskanalysis);
-        buildingriskanalysis.setText(computerResults() + " Units");
+        buildingriskanalysis.setText(computerResults() + " Rupees");
     }
 
     private double computerResults() {
-        return 1.23;
+        Double rwpCost = buildingRiskAnalysisUserData.getRoofTopArea() * cost;
+        Double wwpCost = buildingRiskAnalysisUserData.getPerimeterOfBuilding()
+                * (buildingRiskAnalysisUserData.getWaterProofingDepth()/buildingRiskAnalysisUserData.getFloodDepthData())
+                * cost;
+        return rwpCost + wwpCost;
     }
 
     @Override
